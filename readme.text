@@ -1,0 +1,7 @@
+to run use command 'ruby greedGame.rb'
+
+initially 5 dices will be rolled and score will be generated according to the rules
+
+for non scoring dices user will be prompted for input whether they want to roll it again
+
+once the total score of a player reached 3000, a final round will begin and winner will be declared.
