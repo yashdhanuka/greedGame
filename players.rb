@@ -14,8 +14,6 @@ class Players < Score
       sc = score(@@num)
       puts "Score in this round: #{sc}"
       return "no more chance" if sc == 0
-      @@tc = total_score(i-1,sc)
-      puts "total score: #{@@tc}"
       
       rem = non_scored_dice(@@num)
       puts rem
@@ -26,6 +24,8 @@ class Players < Score
       if @input =="y"
         play(i,rem)
       end
+      @@tc = total_score(i-1,sc)
+      puts "total score: #{@@tc}"
     end
     def total_score(i,num)
         @tc[i] += num
