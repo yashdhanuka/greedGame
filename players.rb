@@ -16,7 +16,7 @@ class Players < Score
       sc = score(@@num)
       puts "Score in this round: #{sc}"
       return "no more chance" if sc == 0
-      @@tc = get_in_the_game(i-1,sc)
+      @@tc = total(i-1,sc)
       puts "total score of player#{i}: #{@@tc}"
       rem = non_scored_dice(@@num)
       puts "remaining dice: #{rem}"
@@ -47,6 +47,18 @@ class Players < Score
         end
         if @counter[i] == 0 && score >=300
             @counter[i] += 1
+            @tc[i] += score
+        end
+    end
+    def start(i,score)
+        puts "counter: #{@counter}"
+        if score >= 300
+            @counter[i] +=1
+        end
+    end
+    def total(i,score)
+        start(i,score)
+        if score>0 && @counter[i] > 0
             @tc[i] += score
         end
     end
