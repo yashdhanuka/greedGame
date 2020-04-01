@@ -7,7 +7,7 @@ players = Players.new(no_of_players)
 max_score = 0
 round = 1
 
-while(max_score<1000)
+while(max_score<3000)
     puts "Round #{round}"
     puts "-----------------------------------------------------"
     for i in 1..no_of_players
